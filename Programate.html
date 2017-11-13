@@ -70,19 +70,36 @@
         </div>
     </nav>
 
-    <div class="carousel carousel-slider">
-        <a class="carousel-item" href="#one!">
-            <img src="img/Home/IMAGEN1_BANNER.png">
-        </a>
-        <a class="carousel-item" href="#two!">
-            <img src="img/Home/IMAGEN1_BANNER.png">
-        </a>
-        <a class="carousel-item" href="#three!">
-            <img src="img/Home/IMAGEN1_BANNER.png">
-        </a>
-        <a class="carousel-item" href="#four!">
-            <img src="img/Home/IMAGEN1_BANNER.png">
-        </a>
+    <br />
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col l6 s12">
+                <div id="googleMap" style="width:80%;height:400px;"></div>
+            </div>
+
+            <div class="col l6 s12">
+
+                <div class="row">
+                    <h5>TALLER: DESCUBRIENDOME A MI MISMO</h5>
+                    <h6>12/Noviembre/2017 7:30 pm</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, praesentium? Corporis, officiis quas velit
+                        quidem expedita aliquid nobis magnam error rem recusandae facilis vero sint reiciendis placeat nesciunt
+                        nihil doloribus?</p>
+                </div>
+
+                <div class="row">
+                    <h5>JORNADA DE RESTAURACION EMOCIONAL</h5>
+                    <h6>19/Noviembre/2017 6:30 pm</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, praesentium? Corporis, officiis quas velit
+                        quidem expedita aliquid nobis magnam error rem recusandae facilis vero sint reiciendis placeat nesciunt
+                        nihil doloribus?</p>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
     <footer class="page-footer">
@@ -160,6 +177,27 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        function myMap() {
+
+            var myLatLng = { lat: 4.631402599999999, lng: -74.06417049999999 };
+
+            var map = new google.maps.Map(document.getElementById('googleMap'), {
+                zoom: 17,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Offina Principal'
+            });
+
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIk53UdgbWklPfozKAhE9Yi5_NMcHQTRo&callback=myMap"></script>
 
 </body>
 
